@@ -1,0 +1,23 @@
+<p>my-component works!</p>
+<input [(ngModel)]="id">
+<input readonly [(ngModel)]="id">
+<br>
+
+Mon id est : {{id}}
+<br>
+
+Mon poke est : {{selectedPokeId}}
+<br>
+<input [(ngModel)]="searchPokeName">
+
+<select [(ngModel)]="selectedPokeId">
+  <option [value]="poke.id" *ngFor="let poke of pokes | filterPokemonPipe: 'name': searchPokeName">
+    {{poke.name}}
+  </option>
+</select>
+<button (click)="go()">GO</button>
+
+<ul>
+  <li *ngFor="let poke of pokes">{{poke.name}}</li>
+
+</ul>

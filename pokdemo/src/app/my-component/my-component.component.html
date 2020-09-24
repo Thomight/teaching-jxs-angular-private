@@ -16,8 +16,11 @@ Mon poke est : {{selectedPokeId}}
   </option>
 </select>
 <button (click)="go()">GO</button>
-
-<ul>
+<br>
+<div *ngIf="pokeDetail">
+  <app-poke-detail [detail]="pokeDetail"></app-poke-detail>
+</div>
+<!-- <ul>
   <li *ngFor="let poke of pokes">{{poke.name}}</li>
 
-</ul>
+</ul> -->

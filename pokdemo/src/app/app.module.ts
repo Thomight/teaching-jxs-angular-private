@@ -11,6 +11,10 @@ import { FilterPokemonPipePipe } from './filter-pokemon--pipe.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeDetailComponent } from './poke-detail/poke-detail.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CalendarModule} from 'primeng/calendar';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,10 @@ import { PokeDetailComponent } from './poke-detail/poke-detail.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CalendarModule,
+    ToggleButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
